@@ -59,3 +59,16 @@ Thumbs.db
 
 # Alembic
 alembic/versions/*.pyc
+
+# Docker
+.docker/
+docker-compose.override.yml
+.env.prod
+secrets/
+ssl/
+nginx.conf
+mysql.conf
+
+# Docker volumes and data
+mysql_data/
+nginx_logs/

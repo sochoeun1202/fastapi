@@ -50,13 +50,58 @@ D:\python\fastapi/
 
 ## Quick Start
 
-### 1. Prerequisites
+### Option 1: Docker (Recommended)
 
+#### Prerequisites
+- Docker and Docker Compose
+- Git (optional)
+
+#### Installation
+```bash
+# Clone or navigate to the project directory
+cd D:\python\fastapi
+
+# Start all services with Docker
+docker-compose up -d
+
+# Or use the management script (Windows)
+.\docker-manage.ps1 up
+```
+
+The application will be available at:
+- **FastAPI**: http://localhost:8000
+- **API Docs**: http://localhost:8000/docs
+- **phpMyAdmin**: http://localhost:8080 (admin tools)
+
+#### Docker Management
+```bash
+# Build the image
+docker-compose build
+
+# Start services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+
+# Access database
+docker-compose exec mysql mysql -u dev -pdev123! testdb
+
+# Access app container
+docker-compose exec web bash
+```
+
+### Option 2: Local Development
+
+#### Prerequisites
 - Python 3.8+
 - MySQL Server
 - Virtual Environment (recommended)
 
-### 2. Installation
+#### Installation
 
 ```bash
 # Clone or navigate to the project directory
